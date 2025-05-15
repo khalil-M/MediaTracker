@@ -22,12 +22,17 @@ struct EmptyListView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Color(UIColor.secondarySystemBackground))
                     .padding(.top, -6)
             }
     }
 }
 
-#Preview {
+#Preview("Light Theme") {
     EmptyListView()
+}
+
+#Preview("Dark Theme") {
+    EmptyListView()
+        .preferredColorScheme(.dark)
 }
