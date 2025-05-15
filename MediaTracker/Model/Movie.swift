@@ -1,5 +1,5 @@
 //
-//  Genre.swift
+//  Movie.swift
 //  MediaTracker
 //
 //  Created by User on 15/05/2025.
@@ -31,7 +31,7 @@ extension Movie {
         container.mainContext.insert(Movie(title: "Lord fo the Rings", genre: Genre(rawValue: 6)!))
         container.mainContext.insert(Movie(title: "Magnificient Seven", genre: Genre(rawValue: 12)!))
         container.mainContext.insert(Movie(title: "The revenent", genre: Genre(rawValue: 5)!))
-        container.mainContext.insert(Movie(title: "Dirty Dancing", genre: Genre(rawValue: 10)!)) 
+        container.mainContext.insert(Movie(title: "Dirty Dancing", genre: Genre(rawValue: 10)!))
         return container
     }
 }
