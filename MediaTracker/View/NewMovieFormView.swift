@@ -46,8 +46,12 @@ struct NewMovieFormView: View {
                 }
                 
                 Button {
-                    addNewMovie()
-                    dismiss()
+                    if title.isEmpty || title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                        
+                    } else {
+                        addNewMovie()
+                        dismiss()
+                    }
                 } label: {
                     Text("Save")
                         .font(.title2.weight(.medium))
@@ -56,6 +60,7 @@ struct NewMovieFormView: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.extraLarge)
                 .buttonBorderShape(.roundedRectangle)
+                .disabled(title.isEmpty || title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 
                 Button {
                     dismiss
